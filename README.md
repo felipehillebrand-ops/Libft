@@ -203,7 +203,7 @@ int main(void)
 
 ---
 
-## Technical Choices
+# Technical Choices
 
 This project follows the requirements defined by the 42 subject:
 
@@ -220,7 +220,7 @@ This project follows the requirements defined by the 42 subject:
 
 ---
 
-## Testing
+# Testing
 
 The project can be tested using:
 
@@ -276,7 +276,7 @@ This project was developed for educational purposes as part of the 42 curriculum
 
 ---
 
-## Author
+# Author
 
 Felipe José Hillebrand
 
