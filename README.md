@@ -280,4 +280,4 @@ This project was developed for educational purposes as part of the 42 curriculum
 
 Felipe José Hillebrand
 
-GitHub: https://github.com/felipehillebrand-ops
+GitHub: github.com/felipehillebrand-ops
