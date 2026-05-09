@@ -117,7 +117,7 @@ typedef struct s_list
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```text
 .
