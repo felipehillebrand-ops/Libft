@@ -26,11 +26,11 @@ This library includes:
 
 ---
 
-## Features
+# Features
 
-### Mandatory Functions
+## Mandatory Functions
 
-#### Character Checks & Conversion
+### Character Checks & Conversion
 
 | Function | Description |
 |---|---|
@@ -129,16 +129,16 @@ typedef struct s_list
 
 ---
 
-## Instructions
+# Instructions
 
-### Clone the Repository
+## Clone the Repository
 
 ```bash
 git clone https://github.com/felipehillebrand-ops/Libft.git
 cd Libft
 ```
 
-### Compilation
+## Compilation
 
 Compile mandatory functions:
 
@@ -152,7 +152,7 @@ Compile bonus functions:
 make bonus
 ```
 
-### Cleaning Object Files
+## Cleaning Object Files
 
 Remove object files:
 
@@ -225,9 +225,6 @@ This project follows the requirements defined by the 42 subject:
 The project can be tested using:
 
 - `norminette`
-- `libftTester`
-- `libft-war-machine`
-- `Francinette`
 
 Example:
 
@@ -237,23 +234,13 @@ norminette
 
 ---
 
-## Resources
+# Resources
 
-### Documentation & References
+## Documentation & References
 
-- The C Programming Language — Brian W. Kernighan & Dennis M. Ritchie
 - Linux Manual Pages (`man` pages)
-- POSIX documentation
-- GNU C Library Documentation
 - 42 Subject PDF for Libft
 
-Useful online references:
-
-- https://man7.org/linux/man-pages/
-- https://cplusplus.com/reference/cstring/
-- https://www.gnu.org/software/libc/documentation.html
-- https://github.com/Tripouille/libftTester
-- https://github.com/jtoty/Libftest
 
 ### AI Usage Disclosure
 
