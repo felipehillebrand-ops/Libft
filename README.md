@@ -1,12 +1,8 @@
 *This project has been created as part of the 42 curriculum by **fjose-hi**.*
 
-# Libft
+# Description
 
 A custom static C library developed as part of the 42 curriculum. This project recreates several standard C library functions while introducing additional utility functions and linked list management tools that can be reused throughout future projects.
-
----
-
-## Description
 
 Libft is one of the foundational projects in the 42 curriculum. The goal of the project is to deepen the understanding of low-level programming concepts in C by rebuilding commonly used standard library functions from scratch.
 
