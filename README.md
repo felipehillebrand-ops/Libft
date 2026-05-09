@@ -242,7 +242,7 @@ norminette
 - 42 Subject PDF for Libft
 
 
-### AI Usage Disclosure
+## AI Usage Disclosure
 
 AI tools were used during this project for:
 
@@ -255,7 +255,7 @@ All implementation, debugging, testing, and final validation of the code were co
 
 ---
 
-## Learning Outcomes
+# Learning Outcomes
 
 Through this project, the following concepts were strengthened:
 
@@ -270,7 +270,7 @@ Through this project, the following concepts were strengthened:
 
 ---
 
-## License
+# License
 
 This project was developed for educational purposes as part of the 42 curriculum.
 
