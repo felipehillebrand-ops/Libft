@@ -1,35 +1,40 @@
+*This project has been created as part of the 42 curriculum by felipehillebrand-ops.*
+
 # Libft
 
-> A custom C library developed as part of the 42 School curriculum.
+## Description
 
-## 📚 About
+Libft is a custom C library developed as part of the 42 School curriculum.  
+The objective of the project is to recreate a set of standard C library functions while gaining a deeper understanding of low-level programming concepts such as memory management, string manipulation, pointers, and data structures.
 
-Libft is the first foundational project in the 42 curriculum.  
-The objective is to recreate a collection of standard C library functions from scratch, while also implementing additional utility functions that will be reused throughout future projects.
+This project serves as a foundational library that will be reused throughout future 42 projects.
 
-This project strengthens understanding of:
+The library is compiled into a static archive named `libft.a`, which can then be linked to other C programs.
 
-- Memory management
-- String manipulation
-- Pointer arithmetic
-- Linked lists
-- Modular programming
-- Static libraries in C
-- Low-level programming concepts
+### Project Goals
 
-The library is compiled into a static archive (`libft.a`) that can be linked into future C projects.
+The goals of this project are to:
+
+- Reimplement commonly used libc functions
+- Understand how standard library functions work internally
+- Learn static library creation and usage
+- Improve proficiency in the C programming language
+- Practice clean, modular, and reusable code
+- Develop a deeper understanding of memory allocation and pointer manipulation
 
 ---
 
-## ⚙️ Compilation
+# Instructions
 
-Compile the mandatory part:
+## Compilation
+
+Compile the mandatory part of the library:
 
 ```bash
 make
 ```
 
-Compile including bonus functions:
+Compile the bonus part:
 
 ```bash
 make bonus
@@ -41,13 +46,13 @@ Remove object files:
 make clean
 ```
 
-Remove object files and library:
+Remove object files and the library:
 
 ```bash
 make fclean
 ```
 
-Recompile everything:
+Recompile the entire project:
 
 ```bash
 make re
@@ -55,13 +60,42 @@ make re
 
 ---
 
-## 📦 Library Structure
+## Using the Library
 
-### Part 1 — Libc Functions
+Include the header file in your project:
 
-Re-implementations of standard C library functions.
+```c
+#include "libft.h"
+```
 
-#### Character Checks
+Compile your program together with the library:
+
+```bash
+cc main.c -L. -lft
+```
+
+Example:
+
+```c
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+    printf("%zu\n", ft_strlen("Libft"));
+    return (0);
+}
+```
+
+---
+
+# Library Description
+
+## Part 1 — Libc Functions
+
+These functions are reimplementations of standard C library functions.
+
+### Character Classification
 
 - `ft_isalpha`
 - `ft_isdigit`
@@ -69,7 +103,7 @@ Re-implementations of standard C library functions.
 - `ft_isascii`
 - `ft_isprint`
 
-#### String & Memory Functions
+### String and Memory Manipulation
 
 - `ft_strlen`
 - `ft_memset`
@@ -86,29 +120,34 @@ Re-implementations of standard C library functions.
 - `ft_strnstr`
 - `ft_strdup`
 
-#### Conversion Functions
+### Character Conversion
 
-- `ft_atoi`
 - `ft_toupper`
 - `ft_tolower`
 
-#### Memory Allocation
+### Conversion and Allocation
 
+- `ft_atoi`
 - `ft_calloc`
 
 ---
 
-### Part 2 — Additional Functions
+## Part 2 — Additional Functions
 
-Custom utility functions not included in the standard libc.
+These are utility functions created to extend the standard library.
 
-- `ft_substr`
-- `ft_strjoin`
-- `ft_strtrim`
-- `ft_split`
-- `ft_itoa`
-- `ft_strmapi`
-- `ft_striteri`
+### String Utilities
+
+- `ft_substr` — Extracts a substring from a string
+- `ft_strjoin` — Concatenates two strings
+- `ft_strtrim` — Removes specified characters from the beginning and end of a string
+- `ft_split` — Splits a string according to a delimiter
+- `ft_itoa` — Converts an integer into a string
+- `ft_strmapi` — Applies a function to each character of a string
+- `ft_striteri` — Iterates through a string and applies a function
+
+### File Descriptor Output
+
 - `ft_putchar_fd`
 - `ft_putstr_fd`
 - `ft_putendl_fd`
@@ -116,9 +155,11 @@ Custom utility functions not included in the standard libc.
 
 ---
 
-### Bonus Part — Linked Lists
+## Bonus Part — Linked Lists
 
-Singly linked list manipulation functions.
+The bonus part introduces singly linked list manipulation.
+
+### Linked List Functions
 
 - `ft_lstnew`
 - `ft_lstadd_front`
@@ -130,40 +171,19 @@ Singly linked list manipulation functions.
 - `ft_lstiter`
 - `ft_lstmap`
 
----
-
-## 🛠️ Usage
-
-Include the header in your project:
+### Linked List Structure
 
 ```c
-#include "libft.h"
-```
-
-Compile your project with the library:
-
-```bash
-cc main.c -L. -lft
-```
-
-Example:
-
-```c
-#include "libft.h"
-#include <stdio.h>
-
-int main(void)
+typedef struct s_list
 {
-    char str[] = "libft";
-
-    printf("Length: %zu\n", ft_strlen(str));
-    return (0);
-}
+    void            *content;
+    struct s_list   *next;
+} t_list;
 ```
 
 ---
 
-## 📁 Project Structure
+# Project Structure
 
 ```text
 .
@@ -176,54 +196,88 @@ int main(void)
 
 ---
 
-## ✅ Rules & Constraints
+# Rules and Constraints
 
-This project follows the 42 School norm requirements:
+This project follows the 42 School norm requirements.
+
+## Compilation Flags
+
+```bash
+-Wall -Wextra -Werror
+```
+
+## Constraints
 
 - No global variables
-- Compilation flags:
-  - `-Wall`
-  - `-Wextra`
-  - `-Werror`
-- Only allowed functions may be used
-- Code must follow the Norminette style guide
+- Functions must follow the Norminette coding style
+- Only authorized functions may be used
+- Memory leaks must be avoided
 
 ---
 
-## 🧪 Testing
+# Resources
 
-The library can be tested using:
+## Documentation and References
 
-- Norminette
-- Custom unit tests
-- Community testers such as:
-  - Tripouille libftTester
-  - libft-war-machine
+### Official Documentation
+
+- The C Standard Library documentation  
+  https://cplusplus.com/reference/clibrary/
+
+- Linux manual pages  
+  https://man7.org/linux/man-pages/
+
+- GNU C Library Documentation  
+  https://www.gnu.org/software/libc/documentation.html
+
+### Tutorials and Learning Resources
+
+- GeeksforGeeks — C Programming  
+  https://www.geeksforgeeks.org/c-programming-language/
+
+- Learn C  
+  https://www.learn-c.org/
+
+- Harvard CS50 Notes  
+  https://cs50.harvard.edu/
 
 ---
 
-## 🚀 Goals of the Project
+## AI Usage Disclosure
 
-Through Libft, the goal is to learn how standard C functions work internally by rebuilding them manually.  
-This project serves as the base library for many future 42 projects such as:
+Artificial Intelligence tools were used during the development of this project for:
+
+- Clarifying concepts related to C programming
+- Understanding function behavior and edge cases
+- Improving documentation quality
+- Reviewing explanations of memory management concepts
+- Generating README structure and formatting suggestions
+
+AI was **not** used to automatically generate or replace the implementation logic of mandatory project functions without understanding or manual verification.
+
+---
+
+# Future Usage
+
+This library will be reused in future 42 projects such as:
 
 - ft_printf
 - get_next_line
-- so_long
 - push_swap
+- so_long
 - minishell
 - cub3D
 
 ---
 
-## 👨‍💻 Author
+# Author
 
-Felipe José Hillebrand
+Felipe Hillebrand
 
 GitHub: https://github.com/felipehillebrand-ops
 
 ---
 
-## 📄 License
+# License
 
-This project is for educational purposes as part of the 42 curriculum.
+This project was developed for educational purposes as part of the 42 curriculum.
