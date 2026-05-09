@@ -272,7 +272,7 @@ This library will be reused in future 42 projects such as:
 
 # Author
 
-Felipe Hillebrand
+Felipe José Hillebrand
 
 GitHub: https://github.com/felipehillebrand-ops
 
