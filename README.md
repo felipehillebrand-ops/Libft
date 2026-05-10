@@ -214,7 +214,7 @@ This project follows the requirements defined by the 42 subject:
 -Wall -Wextra -Werror
 ```
 
-- No global variables.
+- No global variables are used.
 - Fully compliant with the 42 Norm.
 - Static library generated using `ar`.
 
