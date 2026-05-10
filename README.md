@@ -225,6 +225,8 @@ This project follows the requirements defined by the 42 subject:
 The project can be tested using:
 
 - `norminette`
+- Custom test cases
+- Community Libft testers
 
 Example:
 
